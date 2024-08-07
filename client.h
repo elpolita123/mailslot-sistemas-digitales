@@ -14,11 +14,10 @@ class Mailslotclient : extend IMailslotclient {
 public:
 	Mailslotclient() {}    
 	virtual ~Mailslotclient(void) {}                        
-	virtual bool connect(void)
-	}
+	virtual bool connect(void){
 		std::cout << (hMailslot != NULL ? "" : "Error connecting to the mailslot");
 		return hMailslot != INVALID_HANDLE_VALUE || (std::cerr << "Exiting...\n", exit(0), false);
-	}
+}
 	virtual bool sendmessage(void) {
 		std::string message;
 		std::cout << "Message:";
